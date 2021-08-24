@@ -1,10 +1,11 @@
-var sasuke = {
-    name: 'Georgey',
-    power: 'Sharingun',
-    kills: 3,
-    combos: ['Lions Barnage', 'Dragon Fire Jutsu'],
-    exams: [10, 'Genin']
+var ROLE;
+(function (ROLE) {
+    ROLE[ROLE["ADMIN"] = 0] = "ADMIN";
+    ROLE[ROLE["READ_ONLY"] = 1] = "READ_ONLY";
+})(ROLE || (ROLE = {}));
+var object = {
+    name: 'Naruto',
+    kills: 4,
+    role: ROLE.ADMIN
 };
-console.log(sasuke.combos);
-var powers = [' Ko', 'Yo'];
-console.log(powers.length);
+console.log(object.role);
